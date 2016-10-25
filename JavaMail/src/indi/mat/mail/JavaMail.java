@@ -33,7 +33,7 @@ public class JavaMail {
 		message.setFrom(new InternetAddress("yangju90@163.com"));
 		// Set TO:
 		InternetAddress a[] = new InternetAddress[1];
-		a[0] = new InternetAddress("yangju90@sina.com");
+		a[0] = new InternetAddress("y583113758@163.com");
 		message.setRecipients(Message.RecipientType.TO, a);
 	    message.setSubject("JavaMail APIs Test");
 	    message.setSentDate(new Date());
