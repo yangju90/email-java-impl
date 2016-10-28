@@ -4,5 +4,8 @@
 1、 JavaMail文件夹为一个单独的工程，里面包括了收发邮件的例子，和一个丑到爆的桌面软件。    
     
    *1. indi.mat.client.* * 中的内容一律为界面程序； 
-   *2. preference中放的是javamail-1.5.6-src.zip 源码包；  
-   *3. lib中放的是邮件开发的jar包。  
+   
+   *2. preference中放的是javamail-1.5.6-src.zip 源码包； 
+   
+   *3. lib中放的是邮件开发的jar包。 
+   
