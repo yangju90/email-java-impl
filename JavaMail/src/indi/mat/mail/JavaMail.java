@@ -21,8 +21,7 @@ public class JavaMail {
 	
 	public static void main(String[] args) throws AddressException, MessagingException {
 		// TODO Auto-generated method stub
-//		Authenticator authenticator = new AccountAuthenticator("yangju90", "eWFuZ2p1");
-		Authenticator authenticator = AccountAuthenticator.getInstance("yangju90", "eWFuZ2p1");
+		Authenticator authenticator = AccountAuthenticator.getInstance("", "");
 		Properties props = new Properties();
 		props.setProperty("mail.transport.protocol", "smtp");
 		props.setProperty("mail.debug", "true");
@@ -32,10 +31,10 @@ public class JavaMail {
 		Session session = Session.getInstance(props,authenticator);
 		Message message = new MimeMessage(session);
 		// Set FROM:
-		message.setFrom(new InternetAddress("yangju90@163.com"));
+		message.setFrom(new InternetAddress(""));
 		// Set TO:
 		InternetAddress a[] = new InternetAddress[1];
-		a[0] = new InternetAddress("851232695@qq.com");
+		a[0] = new InternetAddress("");
 		message.setRecipients(Message.RecipientType.TO, a);
 	    message.setSubject("JavaMail APIs Test");
 	    message.addFrom(new InternetAddress[]{new InternetAddress("zhaozhixiang@qq.com")});

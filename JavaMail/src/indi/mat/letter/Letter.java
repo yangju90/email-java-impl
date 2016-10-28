@@ -29,8 +29,7 @@ public class Letter {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Authenticator authenticator = new AccountAuthenticator("yangju90", "eWFuZ2p1");
-//		Authenticator authenticator = new AccountAuthenticator("yangju90", "y87103546");
+		Authenticator authenticator = new AccountAuthenticator("", "");
 
 		Properties prop = new Properties();
 		prop.setProperty("mail.transport.protocol", "smtp");
@@ -43,17 +42,17 @@ public class Letter {
 		MimeMessage mesg = new MimeMessage(session);
 
 		try {
-			mesg.setReplyTo(new InternetAddress[]{new InternetAddress("yangju90@sina.com")});
+			mesg.setReplyTo(new InternetAddress[]{new InternetAddress("")});
 			
 			mesg.setSubject("风情同志，请认真高清楚里面的内容！");
 			// Set FROM:
 //			InternetAddress ina = new InternetAddress("yangju90@163.com");
 //			ina.setPersonal("小当家");
 //			mesg.setFrom(ina);
-			mesg.setFrom(new InternetAddress(""+MimeUtility.encodeText("英航")+" <yangju90@163.com>"));
+			mesg.setFrom(new InternetAddress(""+MimeUtility.encodeText("英航")+" <>"));
 			// Set TO:
 			InternetAddress a[] = new InternetAddress[1];
-			a[0] = new InternetAddress("851232695@qq.com");
+			a[0] = new InternetAddress("");
 			a[0].setPersonal("杨举");;
 			mesg.setRecipients(Message.RecipientType.TO, a);
 		} catch (MessagingException e1) {

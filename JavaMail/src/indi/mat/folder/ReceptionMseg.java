@@ -46,10 +46,8 @@ public class ReceptionMseg {
 		}
 
 		System.out.println(date);
-		 Authenticator authenticator = new AccountAuthenticator("yangju90",
-		 "eWFuZ2p1");
-//		Authenticator authenticator = new AccountAuthenticator("yangju90",
-//				"y87103546");
+		 Authenticator authenticator = new AccountAuthenticator("",
+		 "");
 		Properties props = new Properties();
 		props.put("mail.store.protocol", "pop3");
 		props.put("mail.pop3.host", "pop3.163.com");

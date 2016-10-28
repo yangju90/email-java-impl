@@ -24,9 +24,10 @@ public class EmailTs {
 		props.setProperty("mail.debug", "true");
 		props.setProperty("mail.host", "smtp.sina.com");
 		props.setProperty("mail.smtp.auth", "true");
-
+		
+		//输入用户名密码
 		Session session = Session.getInstance(props,
-				AccountAuthenticator.getInstance("yangju90", "y87103546"));
+				AccountAuthenticator.getInstance("", ""));
 		
 		FileInputStream is = null;
 		MimeMessage mesg = null;
@@ -49,7 +50,7 @@ public class EmailTs {
 		
 		//发送信件
 		try {
-			Transport.send(mesg, InternetAddress.parse("y583113758@163.com"));
+			Transport.send(mesg, InternetAddress.parse(""));//填写发送信件的目标
 		} catch (AddressException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
