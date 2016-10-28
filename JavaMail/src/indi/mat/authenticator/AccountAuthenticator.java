@@ -19,5 +19,9 @@ public class AccountAuthenticator extends Authenticator {
 		// TODO Auto-generated method stub
 		return new PasswordAuthentication(name, password);
 	}
-
+	
+	public static AccountAuthenticator getInstance(String name,String password){
+		return new AccountAuthenticator(name ,password);
+	}	
+	
 }
