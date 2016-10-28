@@ -3,7 +3,6 @@ package indi.mat.mail;
 import java.util.Date;
 import java.util.Properties;
 
-import javax.mail.Address;
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -21,8 +20,7 @@ public class JavaMail {
 	
 	public static void main(String[] args) throws AddressException, MessagingException {
 		// TODO Auto-generated method stub
-//		Authenticator authenticator = new AccountAuthenticator("yangju90", "eWFuZ2p1");
-		Authenticator authenticator = AccountAuthenticator.getInstance("yangju90", "eWFuZ2p1");
+		Authenticator authenticator = new AccountAuthenticator("yangju90", "eWFuZ2p1");
 		Properties props = new Properties();
 		props.setProperty("mail.transport.protocol", "smtp");
 		props.setProperty("mail.debug", "true");
@@ -35,10 +33,9 @@ public class JavaMail {
 		message.setFrom(new InternetAddress("yangju90@163.com"));
 		// Set TO:
 		InternetAddress a[] = new InternetAddress[1];
-		a[0] = new InternetAddress("851232695@qq.com");
+		a[0] = new InternetAddress("yangju90@sina.com");
 		message.setRecipients(Message.RecipientType.TO, a);
 	    message.setSubject("JavaMail APIs Test");
-	    message.addFrom(new InternetAddress[]{new InternetAddress("zhaozhixiang@qq.com")});
 	    message.setSentDate(new Date());
 	    // If the desired charset is known, you can use
 	    // setText(text, charset)
